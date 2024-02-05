@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lennard Schellenberger</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./scripts/index.js"></script>
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    </style>
+  </head>
+
+  <body class="w3-black">
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <!-- Avatar image in top left corner -->
+      <img src="../data/lennardschellenberger.jpg" style="width:100%">
+      <a href="../index.html#" class="w3-bar-item w3-button w3-padding-large w3-black">
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p>START</p>
+      </a>
+      <a href="../index.html#ueber" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-user w3-xxlarge"></i>
+        <p>ÜBER</p>
+      </a>
+      <a href="../index.html#projekte" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-eye w3-xxlarge"></i>
+        <p>PROJEKTE</p>
+      </a>
+      <a href="../index.html#kontakt" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-envelope w3-xxlarge"></i>
+        <p>KONTAKT</p>
+      </a>
+      <!-- <img src="qr-code.png" alt="QR Code" title="lennardschellenberger.w3spaces.com" class="qr-code"> -->
+    </nav>
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="../index.html#" class="w3-bar-item w3-button" style="width:25% !important">START</a>
+        <a href="../index.html#ueber" class="w3-bar-item w3-button" style="width:25% !important">ÜBER</a>
+        <a href="../index.html#projekte" class="w3-bar-item w3-button" style="width:25% !important">PROJEKTE</a>
+        <a href="../index.html#kontakt" class="w3-bar-item w3-button" style="width:25% !important">KONTAKT</a>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="w3-padding-large" id="main">
+      <!-- Header/Home -->
+      <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+        <h1 class="w3-jumbo heading">Lennard Schellenberger</h1>
+        <p id="header-description">Student Gesundheitsdaten und Digitalisierung</p>
+        <img src="./data/lennardschellenberger.jpg" alt="Lennard Schellenberger" class="w3-image" width="992" height="1108">
+      </header>
+
+      <!-- About Section -->
+      <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="ueber">
+        <h2 id="about-header" class="w3-text-light-grey">Über mich</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <p id="about-description">
+          Ich bin Lennard Schellenberger. Student im Bereich Gesundheitsdaten und Digitalisierung. <br>
+          Als studentische Hilfskraft arbeite ich aktuell am <a href="https://www.iat.eu" class="link">"Institut für Arbeit und Technik" (IAT)</a>, 
+          im Forschungsschwerpunkt <a href="https://www.iat.eu/das-institut/forschungsschwerpunkte/gesundheitswirtschaft-lebensqualitaet.html" class="link">"Gesundheitswirtschaft und Lebensqualität"</a>. <br>
+          Außerdem beschäftige ich mich mit den Themen Web-Development, 3D-Druck und Lasercutting.
+        </p>
+        
+        <h3 id="about-skills-header" class="w3-padding-16 w3-text-light-grey">Meine Fähigkeiten</h3>
+        <p id="about-skills-skill-1" class="w3-wide">HTML und CSS</p>
+        <div class="w3-white">
+          <div class="w3-dark-grey" style="height:28px;width:60%"></div>
+        </div>
+        <p id="about-skills-skill-2" class="w3-wide">Javascript</p>
+        <div class="w3-white">
+          <div class="w3-dark-grey" style="height:28px;width:50%"></div>
+        </div>
+        <p id="about-skills-skill-3" class="w3-wide">C++</p>
+        <div class="w3-white">
+          <div class="w3-dark-grey" style="height:28px;width:30%%"></div>
+        </div><br>
+        
+        <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+          <div class="w3-quarter w3-section">
+            <span id="about-skills-lang-1" class="w3-xlarge">Deutsch</span><br>
+            <span id="about-skills-lang-1-level">Muttersprache</span>
+          </div>
+          <div class="w3-quarter w3-section">
+            <span id="about-skills-lang-2" class="w3-xlarge">Englisch</span><br>
+            <span id="about-skills-lang-2-level">Sehr gut</span>
+          </div>
+          <div class="w3-quarter w3-section">
+            <span id="about-skills-lang-3" class="w3-xlarge">Niederländisch</span><br>
+            <span id="about-skills-lang-3-level">Gut</span>
+          </div>
+          <div class="w3-quarter w3-section">
+            <span id="about-skills-lang-4" class="w3-xlarge">Chinesisch</span><br>
+            <span id="about-skills-lang-4-level">Grundlagen</span>
+          </div>
+        </div>
+
+        <button class="w3-button w3-light-grey w3-padding-large w3-section">
+          <a href="./data/lebenslauf-lennard_schellenberger.pdf" id="download-cv" class="download-cv" download>
+          <i class="fa fa-download"></i> Download Lebenslauf</a>
+        </button>
+
+      <!-- Project Section -->
+      <div class="w3-padding-64 w3-content" id="projekte">
+        <h2 id="projects-header" class="w3-text-light-grey">Meine Projekte</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <p>
+          <a href="https://lennardschellenberger.w3spaces.com" class="project-links">lennardschellenberger.w3spaces.com</a>
+          <span id="projects-project-1">Eine Website über mich.</span>
+        </p>
+      </div>
+      <!-- End Project Section -->
+      </div>
+
+      <!-- Contact Section -->
+      <div class="w3-padding-64 w3-content w3-text-grey" id="kontakt">
+        <h2 id="contact-header" class="w3-text-light-grey">Kontakt</h2>
+        <hr style="width:200px" class="w3-opacity">
+
+        <div class="w3-section">
+          <p>
+            <a href="https://maps.app.goo.gl/XYuv7DQ7EtosWg7t7" class="contacts">
+            <i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+            <span title="Google Maps">Laerholzstraße 7, 44801 Bochum, Deutschland</span></a>
+          </p>
+          <p>
+            <a href="tel:+4915901172221" class="contacts">
+            <i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+            (+49) 015901172221</a>
+          </p>
+          <p>
+            <a href="mailto:lennardschellenberger@gmail.com" class="contacts">
+            <i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+            lennardschellenberger@gmail.com</a>
+          </p>
+        </div><br>
+
+        <p id="contact-form-text" >Schreiben Sie mir eine Nachricht:</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-padding-16" type="text" placeholder="Name"      required name="Name"></p>
+          <p><input class="w3-input w3-padding-16" type="text" placeholder="Email"     required name="Email"></p>
+          <p><input class="w3-input w3-padding-16" type="text" placeholder="Thema"     required name="Thema"></p>
+          <p><input class="w3-input w3-padding-16" type="text" placeholder="Nachricht" required name="Nachricht"></p>
+          <p>
+            <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+            <i class="fa fa-paper-plane"></i>
+            <span id="contact-form-send">SENDEN</span></button>
+          </p>
+        </form>
+      <!-- End Contact Section -->
+      </div>
+      
+      <!-- Footer -->
+      <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+        <a href="https://www.linkedin.com/in/lennard-schellenberger-0604a9241/" class="fa fa-linkedin social-media fa-2x"></a>
+        <a href="https://www.instagram.com/lennard_schellenberger/?next=%2F"    class="fa fa-instagram social-media fa-2x"></a>
+        <a href="./pages/impressum.html"    id="footer-imprint" class="footer-links">Impressum</a><br>
+        <a href="./pages/datenschutz.html"  id="footer-imprint" class="footer-links">Datenschutz</a>
+      <!-- End footer -->
+      </footer>
+
+    <!-- END PAGE CONTENT -->
+    </div>
+
+  </body>
+</html>
