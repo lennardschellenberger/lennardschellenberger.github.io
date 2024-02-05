@@ -36,6 +36,15 @@
     font-weight: bold;
 }
 
+.lang-button {
+    width: 30%;
+    /* Passen Sie die Breite nach Bedarf an */
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
 .copyright {
     text-align: center;
 }
