@@ -1,6 +1,7 @@
-.link{
+.link {
     text-decoration: none;
 }
+
 .qr-code {
     position: fixed;
     bottom: 0;
@@ -8,30 +9,37 @@
     width: 120px;
     z-index: 999;
 }
+
 .download-cv {
     text-decoration: none;
 }
+
 .project-links {
     text-decoration: none;
     font-size: large;
     font-weight: bold;
     margin-right: 10px;
 }
+
 .contacts {
     text-decoration: none;
 }
+
 .social-media {
     text-decoration: none;
     margin-right: 20px;
 }
+
 .footer-links {
     text-decoration: none;
     float: right;
     font-weight: bold;
 }
+
 .copyright {
     text-align: center;
 }
+
 .link:hover,
 .project-links:hover,
 .contacts:hover,
@@ -39,3 +47,5 @@
 .footer-links:hover {
     color: white;
 }
+
+/*d*/
