@@ -2,12 +2,8 @@
     text-decoration: none;
 }
 
-.qr-code {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 120px;
-    z-index: 999;
+.lang-button {
+    background: none;
 }
 
 .download-cv {
@@ -30,14 +26,6 @@
     justify-content: space-between;
 }
 
-.text-block {
-    width: 30%;
-    /* Anpassen der Breite nach Bedarf */
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
 .social-media {
     text-decoration: none;
     margin-right: 20px;
@@ -47,15 +35,6 @@
     text-decoration: none;
     float: right;
     font-weight: bold;
-}
-
-.lang-button {
-    width: 30%;
-    /* Passen Sie die Breite nach Bedarf an */
-    text-align: center;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border: 1px solid #ccc;
 }
 
 .copyright {
@@ -69,5 +48,3 @@
 .footer-links:hover {
     color: white;
 }
-
-/*d*/
