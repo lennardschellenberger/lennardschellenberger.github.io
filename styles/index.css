@@ -1,10 +1,37 @@
 .open-sans {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    padding: 30px 15px;
+}
+
+.social-media {
+    margin: 0 10px;
+    color: #007bff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+}
+
+header {
+    text-align: center;
+    padding: 50px;
+    background: dimgray;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Stellt sicher, dass der Header über anderen Inhalten liegt */
 }
 
 .link {
