@@ -1,99 +1,224 @@
-<!DOCTYPE html>
+<!--
+  Portfolio: index.html
+  - Single-file responsive portfolio ready for GitHub Pages
+  - Edit the sections marked with <!-- EDIT HERE --> to personalise
+
+  Deployment quick notes:
+  1) Create a repo named: <YOUR-GITHUB-USERNAME>.github.io
+  2) Push this index.html to the repository root on the main branch.
+     Example git commands:
+       git init
+       git add index.html
+       git commit -m "Initial commit"
+       git branch -M main
+       git remote add origin https://github.com/YOUR-USERNAME/YOUR-USERNAME.github.io.git
+       git push -u origin main
+  3) Open https://YOUR-USERNAME.github.io after GitHub finishes building (often immediate).
+
+  -- Feel free to copy this file into that repo as index.html --
+-->
+
+<!doctype html>
 <html lang="de">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lennard Schellenberger</title>
-  <meta name="keywords" content="HTML, CSS, Bootstrap">
-  <meta name="description" content="Website über Lennard Schellenberger">
-  <meta name="author" content="Lennard Schellenberger">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/index.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title><!-- EDIT HERE: YOUR NAME -->Max Mustermann — Portfolio</title>
+  <meta name="description" content="Portfolio von Max Mustermann — Data & Public Health / Webprojects">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
+      --radius:14px; --max-width:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial; background:linear-gradient(180deg,#071026 0%, #071826 100%); color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; line-height:1.5;
+      display:flex; align-items:center; justify-content:center; padding:40px 16px;
+    }
+    .site{width:100%; max-width:var(--max-width)}
+
+    header{display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:28px}
+    .brand{display:flex; gap:12px; align-items:center}
+    .logo{width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,var(--accent),#06b6d4); display:grid; place-items:center; font-weight:800}
+    nav{display:flex; gap:12px; align-items:center}
+    nav a{color:var(--muted); text-decoration:none; font-weight:600; font-size:14px}
+    .hero{display:grid; grid-template-columns:1fr 340px; gap:24px; align-items:start}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding:24px; border-radius:var(--radius); box-shadow: 0 6px 24px rgba(2,6,23,0.6)}
+    h1{margin:0 0 8px 0; font-size:28px}
+    p.lead{margin:0 0 14px 0; color:var(--muted)}
+
+    .skills{display:flex; flex-wrap:wrap; gap:8px}
+    .skill{background:var(--glass); padding:6px 10px; border-radius:12px; font-size:13px; color:var(--muted)}
+
+    .projects{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:16px}
+    .project{padding:14px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03)}
+    .project h3{margin:0 0 8px 0}
+    .project p{margin:0 0 12px 0; color:var(--muted); font-size:14px}
+    .cta{display:inline-block; padding:8px 12px; border-radius:10px; font-weight:700; text-decoration:none}
+
+    .contact-row{display:flex; gap:12px; align-items:center}
+    .btn{background:var(--accent); color:white; padding:10px 12px; border-radius:10px; text-decoration:none; font-weight:700}
+
+    footer{margin-top:28px; color:var(--muted); font-size:13px; text-align:center}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .projects{grid-template-columns:1fr}
+    }
+
+    /* light theme -- optional */
+    :root.light{--bg:#f8fafc; --card:#ffffff; --muted:#475569; --accent:#6d28d9; color-scheme:light}
+    .light body{background:linear-gradient(180deg,#f8fafc,#edf2f7)}
+  </style>
 </head>
-
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Lennard Schellenberger</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#skills">Kenntnisse</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projekte</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Header -->
-  <header>
-    <!-- <img src=data\lennardschellenberger-weitbild.jpg alt="Lennard Schellenberger Profilbild" style="width: 100%"> -->
-    <h1>Lennard Schellenberger</h1>
-    <h2>Student (Gesundheitsdaten & Digitalisierung)</h2>
-    <p>Erfahrung in Datenanalyse, Public Health und Digitalisierung</p>
-  </header>
-
-  <!-- main content -->
-  <div class="container">
-    <section id="skills" class="mb-5">
-      <h2 class="text-center">Kenntnisse</h2>
-      <div class="row text-center">
-        <div class="col-md-4">🔹 HTML</div>
-        <div class="col-md-4">🔹 CSS</div>
-        <div class="col-md-4">🔹 Erste Hilfe</div>
-      </div>
-    </section>
-
-    <section id="projects" class="mb-5">
-      <h2 class="text-center">Projekte</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Projekt 1</h5>
-              <p class="card-text">Beschreibung zu Projekt 1.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Projekt 2</h5>
-              <p class="card-text">Beschreibung zu Projekt 2.</p>
-            </div>
-          </div>
+  <div class="site">
+    <header>
+      <div class="brand">
+        <div class="logo">MM</div>
+        <div>
+          <div style="font-weight:700"><!-- EDIT HERE: YOUR NAME -->Max Mustermann</div>
+          <div style="font-size:13px;color:var(--muted)"><!-- EDIT HERE: ROLE -->Data & Public Health · Web</div>
         </div>
       </div>
-    </section>
+      <nav aria-label="Hauptnavigation">
+        <a href="#about">Über</a>
+        <a href="#projects">Projekte</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </header>
 
-    <section id="contact" class="mb-5">
-      <h2 class="text-center">Kontakt</h2>
-      <p class="text-center">📧 E-Mail: deine@email.de</p>
-      <p class="text-center">📞 Telefon: +49 123 456789</p>
-      <p class="text-center">💼 <a href="https://www.linkedin.com/in/lennardschellenberger/">LinkedIn</a></p>
-      <div class="text-center">
-        <a href="dein-lebenslauf.pdf" class="btn btn-primary" download>Lebenslauf herunterladen</a>
-      </div>
-    </section>
+    <main>
+      <section class="hero">
+        <div class="card">
+          <h1><!-- EDIT HERE: HEADLINE -->Hi — ich bin Max. Ich baue datengetriebene Lösungen.</h1>
+          <p class="lead"><!-- EDIT HERE: SHORT BIO -->Ich bin Public-Health-Student und interessiere mich für Datenmanagement, Visualisierung und Web-Tools. Hier findest du meine Projekte, Skills und Kontaktmöglichkeiten.</p>
+
+          <div class="skills" aria-hidden>
+            <!-- EDIT: add or remove skills -->
+            <span class="skill">R / Tidyverse</span>
+            <span class="skill">Shiny</span>
+            <span class="skill">Python</span>
+            <span class="skill">HTML & CSS</span>
+            <span class="skill">Git & GitHub</span>
+          </div>
+
+          <div style="margin-top:16px;display:flex;gap:8px;align-items:center">
+            <a class="btn" href="#contact">Kontakt</a>
+            <a class="cta" href="#projects">Projekte ansehen →</a>
+          </div>
+
+          <div style="margin-top:18px;color:var(--muted);font-size:13px">Share: 
+            <!-- EDIT: put your links -->
+            <a href="#" style="color:var(--muted);margin-left:8px;text-decoration:none">GitHub</a>
+            <a href="#" style="color:var(--muted);margin-left:8px;text-decoration:none">LinkedIn</a>
+          </div>
+        </div>
+
+        <aside style="display:flex;flex-direction:column;gap:12px;">
+          <div class="card">
+            <h3>Aktuelles</h3>
+            <p style="margin:6px 0 0 0;color:var(--muted);font-size:14px"><!-- EDIT: short update -->Praktikum im Landeskrebsregister in Kürze — Visualisierungsprojekte geplant.</p>
+          </div>
+
+          <div class="card">
+            <h3>Kontakt</h3>
+            <p style="margin:0 0 8px 0;color:var(--muted);font-size:14px">Email: <strong id="email">max@example.com</strong></p>
+            <div class="contact-row">
+              <a class="btn" href="mailto:max@example.com">Email senden</a>
+              <button id="copyEmail" class="cta">Email kopieren</button>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projects" style="margin-top:20px">
+        <h2 style="margin-bottom:12px">Projekte</h2>
+        <div class="projects">
+          <!-- EDIT: Replace project cards with your real projects -->
+          <article class="project card">
+            <h3>Heatwave Survey Visualisation</h3>
+            <p>Interaktive Shiny-App zur Auswertung lokaler Hitzepräventionsumfragen.</p>
+            <a class="cta" href="#" target="_blank">Live ansehen</a>
+          </article>
+
+          <article class="project card">
+            <h3>NAS Home Server</h3>
+            <p>Anleitung und Skripte zum Aufbau eines kostengünstigen NAS aus altem PC-Hardware.</p>
+            <a class="cta" href="#">Repo</a>
+          </article>
+
+          <article class="project card">
+            <h3>Intergenerational Learning</h3>
+            <p>Konzept & Poster für ein generationsübergreifendes Lernprojekt zur Reduktion von Einsamkeit.</p>
+            <a class="cta" href="#">Mehr</a>
+          </article>
+
+          <article class="project card">
+            <h3>Study Visualisations</h3>
+            <p>Publikationsgrafiken (ggplot2) und reproduzierbare Analysen für Forschungsprojekte.</p>
+            <a class="cta" href="#">Mehr</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" style="margin-top:20px">
+        <div class="card">
+          <h2>Über mich</h2>
+          <p style="color:var(--muted)"><!-- EDIT: longer bio -->Ich studiere Public Health & Data Management, arbeite an Visualisierungen, Fragebogenauswertung und an wissenschaftlichen Artikeln. Ich interessiere mich für digitale Gesundheitsangebote und die Verbesserung der Gesundheitskompetenz.</p>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:20px">
+        <div class="card">
+          <h2>Kontakt</h2>
+          <p style="color:var(--muted)">Schreibe mir eine kurze Nachricht oder sende eine Mail.</p>
+          <form onsubmit="event.preventDefault(); alert('Öffne dein Mailprogramm oder kopiere die Email.');" style="display:grid;gap:8px;max-width:640px">
+            <input type="text" name="name" placeholder="Dein Name" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+            <input type="email" name="email" placeholder="Deine Email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+            <textarea name="message" rows="4" placeholder="Nachricht" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+            <div style="display:flex;gap:8px">
+              <button type="submit" class="btn">Senden</button>
+              <a class="cta" href="mailto:max@example.com">Per Mail senden</a>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        © <!-- EDIT: year / name -->2025 Max Mustermann — Erstellt mit ❤️ und GitHub Pages
+      </footer>
+    </main>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <a href="https://www.linkedin.com/in/lennard-schellenberger-0604a9241/" class="fa fa-linkedin social-media"></a>
-    <a href="https://github.com/lennardschellenberger" class="fa fa-github social-media"></a>
-    <a href="https://www.instagram.com/lennard_schellenberger/" class="fa fa-instagram social-media"></a>
-    <br>
-    <a href="./pages/impressum.html">Impressum</a> | <a href="./pages/datenschutz.html">Datenschutz</a>
-  </footer>
+  <script>
+    // small helper: copy email button
+    document.getElementById('copyEmail')?.addEventListener('click', async ()=>{
+      const txt = document.getElementById('email')?.textContent || '';
+      try{
+        await navigator.clipboard.writeText(txt);
+        alert('Email kopiert: ' + txt);
+      }catch(e){
+        prompt('Copy email:', txt);
+      }
+    });
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    // smooth scroll for internal anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          document.querySelector(href)?.scrollIntoView({behavior:'smooth'});
+        }
+      })
+    });
+  </script>
 </body>
-
 </html>
